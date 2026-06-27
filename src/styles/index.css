@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  --color-primary: #0f172a;
+  --color-primary-container: #1e293b;
+  --color-inverse-primary: #cbd5e1;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #94a3b8;
+  --color-secondary: #334155; /* Higher contrast Slate 700 */
+  --color-secondary-container: #f1f5f9;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #1e293b;
+  --color-tertiary: #4f46e5;
+  --color-tertiary-container: #e0e7ff;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #4338ca;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f1f5f9;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8fafc;
+  --color-surface-container: #f1f5f9;
+  --color-surface-container-high: #e2e8f0;
+  --color-surface-container-highest: #cbd5e1;
+  --color-on-background: #0f172a;
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #334155;
+  --color-outline: #94a3b8; /* Slate 400 for better visibility */
+  --color-outline-variant: #cbd5e1; /* Slate 300 */
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #f8fafc;
+  --color-error: #dc2626;
+  --color-error-container: #fee2e2;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #991b1b;
+  
+  --color-primary-fixed: #e2e8f0;
+  --color-primary-fixed-dim: #cbd5e1;
+  --color-secondary-fixed: #f1f5f9;
+  --color-secondary-fixed-dim: #e2e8f0;
+  --color-tertiary-fixed: #e0e7ff;
+  --color-tertiary-fixed-dim: #c7d2fe;
+  --color-on-primary-fixed: #0f172a;
+  --color-on-primary-fixed-variant: #334155;
+  --color-on-secondary-fixed: #1e293b;
+  --color-on-secondary-fixed-variant: #475569;
+  --color-on-tertiary-fixed: #312e81;
+  --color-on-tertiary-fixed-variant: #4338ca;
+}
+
+.dark {
+  --color-primary: #f8fafc;
+  --color-primary-container: #1e293b;
+  --color-inverse-primary: #0f172a;
+  --color-on-primary: #0f172a;
+  --color-on-primary-container: #cbd5e1;
+  --color-secondary: #cbd5e1; /* Higher contrast Slate 300 in dark mode */
+  --color-secondary-container: #1e293b;
+  --color-on-secondary: #0f172a;
+  --color-on-secondary-container: #cbd5e1;
+  --color-tertiary: #818cf8;
+  --color-tertiary-container: #1e1b4b;
+  --color-on-tertiary: #1e1b4b;
+  --color-on-tertiary-container: #c7d2fe;
+  --color-background: #0b0f19;
+  --color-surface: #111827;
+  --color-surface-dim: #0b0f19;
+  --color-surface-bright: #1f2937;
+  --color-surface-container-lowest: #030712;
+  --color-surface-container-low: #0f172a;
+  --color-surface-container: #111827;
+  --color-surface-container-high: #1f2937;
+  --color-surface-container-highest: #374151;
+  --color-on-background: #f8fafc;
+  --color-on-surface: #f8fafc;
+  --color-on-surface-variant: #cbd5e1;
+  --color-outline: #475569; /* Slate 600 */
+  --color-outline-variant: #334155; /* Slate 700 */
+  --color-inverse-surface: #f8fafc;
+  --color-inverse-on-surface: #0f172a;
+  --color-error: #f87171;
+  --color-error-container: #7f1d1d;
+  --color-on-error: #7f1d1d;
+  --color-on-error-container: #fca5a5;
+  
+  --color-primary-fixed: #1e293b;
+  --color-primary-fixed-dim: #0f172a;
+  --color-secondary-fixed: #334155;
+  --color-secondary-fixed-dim: #1e293b;
+  --color-tertiary-fixed: #1e1b4b;
+  --color-tertiary-fixed-dim: #312e81;
+  --color-on-primary-fixed: #f8fafc;
+  --color-on-primary-fixed-variant: #cbd5e1;
+  --color-on-secondary-fixed: #e2e8f0;
+  --color-on-secondary-fixed-variant: #94a3b8;
+  --color-on-tertiary-fixed: #c7d2fe;
+  --color-on-tertiary-fixed-variant: #818cf8;
+}
+
+@theme {
+  --font-display-lg: "Playfair Display", serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-headline-sm: "Playfair Display", serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-stat-value: "Geist", sans-serif;
+  --font-label-caps: "Geist", sans-serif;
+
+  --color-primary: var(--color-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-inverse-primary: var(--color-inverse-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+  --color-tertiary: var(--color-tertiary);
+  --color-tertiary-container: var(--color-tertiary-container);
+  --color-on-tertiary: var(--color-on-tertiary);
+  --color-on-tertiary-container: var(--color-on-tertiary-container);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-on-background: var(--color-on-background);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
+  --color-inverse-surface: var(--color-inverse-surface);
+  --color-inverse-on-surface: var(--color-inverse-on-surface);
+  --color-error: var(--color-error);
+  --color-error-container: var(--color-error-container);
+  --color-on-error: var(--color-on-error);
+  --color-on-error-container: var(--color-on-error-container);
+  
+  --color-primary-fixed: var(--color-primary-fixed);
+  --color-primary-fixed-dim: var(--color-primary-fixed-dim);
+  --color-secondary-fixed: var(--color-secondary-fixed);
+  --color-secondary-fixed-dim: var(--color-secondary-fixed-dim);
+  --color-tertiary-fixed: var(--color-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--color-tertiary-fixed-dim);
+  --color-on-primary-fixed: var(--color-on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--color-on-primary-fixed-variant);
+  --color-on-secondary-fixed: var(--color-on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--color-on-secondary-fixed-variant);
+  --color-on-tertiary-fixed: var(--color-on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--color-on-tertiary-fixed-variant);
+
+  --spacing-section-gap: 120px;
+  --spacing-stack-lg: 32px;
+  --spacing-margin-mobile: 20px;
+  --spacing-stack-md: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-stack-sm: 8px;
+}
+
+/* Material Symbols icon utility styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Masonry columns layout rules */
+.masonry-grid {
+  column-count: 1;
+  column-gap: var(--spacing-gutter);
+}
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: var(--spacing-gutter);
+}
+
+/* Map custom height & rendering fixes */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f6faff !important;
+  font-family: inherit;
+}
+.dark .leaflet-container {
+  background-color: #141d23 !important;
+}
+
+/* Custom dark-mode style leaf-map overlays */
+.map-dark-tiles {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
