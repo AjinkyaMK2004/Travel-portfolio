@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AuthProvider } from './contexts/AuthContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Navbar } from './components/common/Navbar';
-import { Footer } from './components/common/Footer';
 import { Skeleton } from './components/common/Skeleton';
 
 // Lazy load pages for chunk splitting and load speed optimizations
@@ -66,9 +65,6 @@ const App: React.FC = () => {
                   </Routes>
                 </React.Suspense>
               </div>
-
-              {/* Dynamic Footer */}
-              <Footer />
             </div>
           </Router>
         </ThemeProvider>
