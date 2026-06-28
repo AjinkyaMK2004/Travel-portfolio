@@ -115,26 +115,28 @@ export const Explore: React.FC = () => {
 
     const status = dbCountry ? dbCountry.status : 'not_visited';
 
-    let fillColor = '#dbe4ed'; // Default not visited (surface-container-highest)
-    let fillOpacity = 0.4;
+    let fillColor = '#f1f5f9'; // Soft slate-gray for not visited
+    let fillOpacity = 0.5;
     let dashArray = '';
     let weight = 1;
-    let color = '#74777d'; // outline
+    let color = '#cbd5e1'; // Light grey outline for cleaner boundaries
 
     if (status === 'visited') {
-      fillColor = '#1a2b3c'; // primary-container
-      fillOpacity = 0.75;
+      fillColor = '#3b82f6'; // Premium vibrant royal blue
+      fillOpacity = 0.25;    // Semi-transparent overlay to reveal geographical map details
+      color = '#2563eb';     // Solid blue border
       weight = 1.5;
     } else if (status === 'current') {
-      fillColor = '#10b981'; // Current (green)
-      fillOpacity = 0.85;
+      fillColor = '#10b981'; // Vibrant emerald green
+      fillOpacity = 0.35;
+      color = '#059669';     // Solid emerald border
       weight = 2;
-      color = '#10b981';
     } else if (status === 'planned') {
-      fillColor = '#f59e0b'; // Planned (amber)
-      fillOpacity = 0.55;
-      dashArray = '3, 4';
-      weight = 1.2;
+      fillColor = '#f59e0b'; // Soft amber orange
+      fillOpacity = 0.18;
+      color = '#d97706';     // Solid orange border
+      dashArray = '3, 5';
+      weight = 1.5;
     }
 
     return {
